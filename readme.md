@@ -1,8 +1,22 @@
 # MyIP.Client
 
-This is a class library for integrating with the MyIP web service.
+This is a class library for integrating with the MyIP web service. The API is relatively simple and so is the client.
+
+Here's a quick example:
+
+```
+var client = new MyIPClient();
+var response = await client.GetAsync();
+
+if (response.IPv4Address != null)
+	Console.WriteLine($"IPv4 Address: {response.IPv4Address}");
+
+if (response.IPv6Address != null)
+	Console.WriteLine($"IPv6 Address: {response.IPv6Address}");
+```
 
 The library is built against .NET Standard 1.3.
+
 
 # NuGet
 
